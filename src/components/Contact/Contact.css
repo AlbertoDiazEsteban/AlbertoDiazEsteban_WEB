@@ -1,0 +1,145 @@
+@import '../Variables/General.css';
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+}
+.contact .contact-chat {
+  position: relative;
+  right: -500px;
+  opacity: 1;
+  width: 360px;
+  height: 560px;
+  margin-bottom: 40px;
+  background-color: #ececec;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 1s;
+  z-index: 8;
+}
+.contact .contact-chat .header-contact {
+  background-color: #D6B9FF;
+  padding: 5%;
+  width: 90%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.2392156863);
+  box-shadow: 0 1px 10px rgba(54, 54, 54, 0.2392156863);
+}
+.contact .contact-chat .header-contact svg {
+  width: 60px;
+  height: 60px;
+}
+.contact .contact-chat .header-contact p {
+  font-size: 1.7em;
+  font-weight: 500;
+  flex-grow: 1;
+}
+.contact .contact-chat .header-contact .close input {
+  cursor: pointer;
+  position: absolute;
+  transform: scale(2.8);
+  z-index: 10;
+  opacity: 0;
+}
+.contact .contact-chat .header-contact .close span {
+  cursor: pointer;
+  width: 40px;
+  height: 5px;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ececec;
+}
+.contact .contact-chat .header-contact .close :nth-child(2) {
+  transform: rotate(45deg);
+}
+.contact .contact-chat .header-contact .close :last-child {
+  transform: rotate(-45deg);
+  position: absolute;
+  margin-top: -5px;
+}
+.contact .contact-chat form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 20px auto;
+}
+.contact .contact-chat form input[type=text], .contact .contact-chat form input[type=email], .contact .contact-chat form textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid rgba(54, 54, 54, 0.2392156863);
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: rgba(214, 185, 255, 0.2);
+}
+.contact .contact-chat form hr {
+  background-color: rgba(54, 54, 54, 0.2392156863);
+  width: 100%;
+  border: none;
+  height: 1.2px;
+}
+.contact .contact-chat form textarea {
+  height: 100px;
+}
+.contact .contact-chat form label {
+  color: rgba(54, 54, 54, 0.4509803922);
+  font-size: 14px;
+}
+.contact .contact-chat button {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0px;
+  background-color: #D6B9FF;
+  color: #ececec;
+  font-weight: 500;
+}
+.contact .contact-chat button:hover {
+  background-color: #b092da;
+}
+.contact .contact-btn {
+  position: absolute;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin: 40px 0px;
+}
+.contact .contact-btn input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  width: 80px;
+  height: 80px;
+  scale: 1.5;
+  margin: auto;
+  margin-top: -5px;
+  z-index: 6;
+}
+.contact .contact-btn svg {
+  position: absolute;
+  margin-top: -20px;
+  scale: 1.1;
+  z-index: 5;
+}
+.contact .active {
+  right: 0px;
+}
+
+@media (max-width: 900px) {
+  .contact {
+    display: none;
+  }
+}/*# sourceMappingURL=Contact.css.map */

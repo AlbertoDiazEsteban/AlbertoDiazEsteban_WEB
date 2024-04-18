@@ -1,0 +1,60 @@
+@import '../Variables/PaletaColor.scss';
+@import '../Variables/General.css';
+
+.skillset {
+    section { display: flex; flex-wrap: wrap; justify-content: center;  }
+    section div {
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+        svg {
+            max-height: 40px;
+            scale: 1.2; 
+            width: auto;
+            filter: drop-shadow(0 0 5px $shadow);
+            margin-bottom: 10px;
+        }
+        flex-wrap: wrap;
+        white-space: wrap;
+        padding: 10px 20px;
+        margin: 5px;
+        background-color: $light25;
+        border: 1px solid $light50;
+        letter-spacing: 0.5px;
+        color: $light;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+    .multiple-logos { 
+        display: block;
+        section { 
+            display: flex; flex-direction: row;
+        }
+        svg { 
+            width: 25px;
+            height: 25px;
+            margin: 3px;
+        }
+    }
+}
+@media (max-width: 800px) {
+    .skillset {
+        section div {
+            flex-direction: row;
+            padding: 5px 10px;
+            font-size: 18px;
+            svg {
+                scale: 1.05;
+                margin: auto;
+                height: 30px;
+                margin-right: 10px;
+            }
+            .multiple-logos {
+                display: flex;
+                svg { 
+                    width: 33px;
+                    height: 33px;
+                    margin: 0px 5px 0px 0px;
+                }
+            }
+        }
+    }
+}

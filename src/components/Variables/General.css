@@ -1,0 +1,76 @@
+@keyframes scroll-animation {
+  from {
+    opacity: 0;
+    scale: 75%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+* {
+  max-width: 100%;
+  text-decoration: none;
+  list-style: none;
+  font-family: system-ui;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  margin-top: 140px;
+  width: 100vw;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ececec;
+  background-color: #363636;
+  font-family: system-ui;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 40px;
+  color: #78D2F9;
+}
+
+button {
+  font-size: 26px;
+  padding: 20px 30px;
+  border-radius: 100px;
+  border: none;
+  text-align: center;
+}
+
+.action-btn {
+  background-color: #ececec;
+  color: #363636;
+  border: 2px solid #ececec;
+}
+
+.action-btn:hover {
+  background-color: #78D2F9;
+  color: #363636;
+  border: 2px solid #78D2F9;
+}
+
+.normal-btn {
+  background-color: #363636;
+  color: #ececec;
+  border: 2px solid #ececec;
+}
+
+.normal-btn:hover {
+  color: #78D2F9;
+  border: 2px solid #78D2F9;
+}
+
+.presentation, .skillset, .projects {
+  max-width: 70%;
+  margin: 100px 15% 30px 15%;
+}/*# sourceMappingURL=General.css.map */

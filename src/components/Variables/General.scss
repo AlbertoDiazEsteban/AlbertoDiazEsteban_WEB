@@ -1,0 +1,87 @@
+@import 'PaletaColor.scss';
+
+@mixin scroll-animation {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: scroll-animation;
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
+}
+
+@mixin scroll-animation-required {
+    opacity: 0;
+    transition: opacity 0.5s, 
+    transform 0.5s;
+}
+
+@keyframes scroll-animation {
+    from {
+         opacity: 0; 
+         scale: 75%; 
+    }
+    to { 
+        opacity: 1; 
+        scale: 100%; 
+    }
+}
+
+* {
+    max-width: 100%;
+    text-decoration: none;
+    list-style: none;
+    font-family: system-ui;
+}
+
+body {
+    margin: 0; padding: 0;
+    margin-top: 140px;
+    width: 100vw; height: auto;
+    box-sizing: border-box;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    color: $light;
+    background-color: $dark; 
+    font-family: system-ui;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    margin: 0; 
+}
+
+h1 {
+    font-size: 40px;
+    color: $primary;
+}
+
+button {
+    font-size: 26px;
+    padding: 20px 30px;
+    border-radius: 100px;
+    border: none;
+    text-align: center;
+}
+.action-btn {
+    background-color: $light;
+    color: $dark;
+    border: 2px solid $light;
+}
+.action-btn:hover {
+    background-color: $primary;
+    color: $dark;
+    border: 2px solid $primary;
+}
+.normal-btn {
+    background-color: $dark;
+    color: $light;
+    border: 2px solid $light;
+}
+.normal-btn:hover {
+    color: $primary;
+    border: 2px solid $primary;
+}
+.presentation, .skillset, .projects {
+    max-width: 70%;
+    margin: 100px 15% 30px 15%;
+}

@@ -1,0 +1,63 @@
+@import '../Variables/General.css';
+.skillset section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skillset section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  white-space: wrap;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: rgba(236, 236, 236, 0.2431372549);
+  border: 1px solid rgba(236, 236, 236, 0.4862745098);
+  letter-spacing: 0.5px;
+  color: #ececec;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.skillset section div svg {
+  max-height: 40px;
+  scale: 1.2;
+  width: auto;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
+  margin-bottom: 10px;
+}
+.skillset .multiple-logos {
+  display: block;
+}
+.skillset .multiple-logos section {
+  display: flex;
+  flex-direction: row;
+}
+.skillset .multiple-logos svg {
+  width: 25px;
+  height: 25px;
+  margin: 3px;
+}
+
+@media (max-width: 800px) {
+  .skillset section div {
+    flex-direction: row;
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+  .skillset section div svg {
+    scale: 1.05;
+    margin: auto;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .skillset section div .multiple-logos {
+    display: flex;
+  }
+  .skillset section div .multiple-logos svg {
+    width: 33px;
+    height: 33px;
+    margin: 0px 5px 0px 0px;
+  }
+}/*# sourceMappingURL=Skills.css.map */

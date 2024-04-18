@@ -1,0 +1,124 @@
+@import '../Variables/PaletaColor.scss';
+@import '../Variables/General.scss';
+@import '../Variables/General.css';
+
+.project-card {
+    @include scroll-animation-required;
+    @include scroll-animation;
+    margin: 20px auto;
+    height: 400px;
+    border: 1px solid $light25;
+    box-shadow: 0px 0px 50px $shadow;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    column-gap: 20px;
+    .project-img {
+        min-width: 50%;
+        max-width: 50%;
+        min-height: 392px;
+        max-height: 392px;
+        border-radius: 5px 0px 0px 5px;
+        background-size: cover;
+        transition: background-position 1s ease-in-out;
+        background-position: 0% 0%;
+        img {
+            min-height: 392px;
+            max-height: 392px;
+            object-fit: cover;
+        }
+    }
+    .project-description {
+        margin-bottom: 10px;
+        width: 50%;
+        display: flex; flex-direction: column; justify-content: space-between;
+        .logos {
+            display: flex; justify-content: flex-end; column-gap: 10px;
+            svg { width: 30px; height: 30px; opacity: 0;}
+            img:hover { filter: drop-shadow(0 0 5px $primary) brightness(105%) saturate(105%);}
+        }
+        h2 { font-weight: 400; }
+        h2:hover { opacity: 0.5; }
+        p { 
+            font-size: 14px; 
+            opacity: 0.5;
+
+        }
+        .technologies-container {
+            height: auto;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 5px;
+            .technology { 
+                margin-right: 3px;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: 500;
+                font-size: 14px;
+                letter-spacing: 1px;
+                line-height: 10px;
+                white-space: nowrap;
+                padding: 3px;
+                border: 1px solid $light25;
+                border-radius: 7px;
+                padding: 5px 8px;
+            }
+        }
+        .btn-container {
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            button {
+                cursor: pointer;
+                padding: 10px 10%;
+                background-color: $primary;
+                border: 1px solid $primary;
+                margin: 0 10px;
+                font-size: 16px;
+                letter-spacing: 1.1px;
+                a {
+                    color: $dark;
+                }
+            }
+            button:hover {
+                background-color: $light;
+                border: 1px solid $light; 
+            }
+        }  
+
+        
+    }
+}
+    
+
+@media (max-width: 800px) {
+    .projects {
+        width: 90%;
+        .project-card{
+            height: auto;
+            flex-direction: column;
+            .project-img {
+                min-width: 100%;
+                height: 250px;
+                .project-images {
+                    width: 100%;
+                    height: 250px;
+                    object-fit: cover;
+                }
+            }
+            .project-description {
+                width: 100%;
+                margin-bottom: 0px;
+                span { line-height: 35px;}
+                .logos {
+                    margin-top: 10px;
+                }
+                button {
+                    padding: 10px 20px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

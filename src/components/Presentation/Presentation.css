@@ -1,0 +1,75 @@
+@import '../Variables/General.css';
+@import './DuckAnimation.css';
+.presentation {
+  display: flex;
+}
+.presentation h2 {
+  font-size: 50px;
+  font-weight: 200;
+  margin: 0px;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+}
+.presentation h2 b {
+  font-weight: 800;
+}
+.presentation h3 {
+  color: #78D2F9;
+  font-size: 40px;
+  font-weight: 200;
+  margin-top: -10px;
+}
+.presentation h3 b {
+  font-weight: 800;
+}
+.presentation h3 i {
+  font-weight: 500;
+}
+.presentation p {
+  font-size: 28px;
+  font-weight: 100;
+}
+.presentation button + button {
+  margin-left: 20px;
+}
+.presentation button + button a {
+  border: none;
+}
+.presentation button + button:hover {
+  margin-left: 20px;
+  color: #78D2F9;
+}
+.presentation button + button:hover a {
+  border: none;
+  color: #78D2F9;
+}
+.presentation .duck-animation {
+  margin: auto;
+  max-width: 40%;
+  min-width: 40%;
+}
+
+@media (max-width: 800px) {
+  .presentation {
+    margin-top: 40px;
+    flex-direction: column-reverse;
+  }
+  .presentation :first-child {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .presentation :first-child button {
+    margin: auto;
+  }
+  .presentation .duck-animation {
+    display: none;
+  }
+  .presentation .action-btn, .presentation .normal-btn {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scale: 0.8;
+  }
+}/*# sourceMappingURL=Presentation.css.map */
