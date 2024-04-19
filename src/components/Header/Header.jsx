@@ -34,10 +34,10 @@ export const Header = () => {
         {/* <a href="#contact"><p>Contact</p></a> */}
       </nav>
       <nav className="social">
-        <a href="https://www.linkedin.com/in/alberto-diaz-esteban/" id="LinkedIn">
+        <a href="https://www.linkedin.com/in/alberto-diaz-esteban/" target='_blank' id="LinkedIn">
           <LogoLinkedin />
         </a>
-        <a href="https://github.com/AlbertoDiazEsteban" id="Github">
+        <a href="https://github.com/AlbertoDiazEsteban" target='_blank' id="Github">
           <LogoGithub />
         </a>
         <div className="container">

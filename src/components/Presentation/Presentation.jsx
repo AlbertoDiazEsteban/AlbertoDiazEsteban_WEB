@@ -7,9 +7,9 @@ export const Presentation = () => {
     <section className="presentation">
         <div>
             <h2><b>Hola</b>, soy <b>Alberto Díaz!</b> ✌️</h2>
-            <h3><b>Desarrollador Web</b> y <i>Diseñador</i> *</h3>
-            <p><q>Me encata afrontar <i>desafios</i> y
-            <br/>encontrar <b>soluciones innovadoras</b></q>.</p>
+            <h3><b>Desarrollador Web</b> y <i>Diseñador Gráfico</i>*</h3>
+            <p><q>Me encata afrontar <i>desafíos</i> y
+            <br/>encontrar <b>Soluciones <i>Innovadoras</i></b></q>.</p>
 
             {/* <h2><b>Hi</b>, I'm <b>Alberto Díaz!</b> ✌️</h2>
             <h3><b>Web developer</b> and <i>Designer</i> *</h3>

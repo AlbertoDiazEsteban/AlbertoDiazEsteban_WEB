@@ -6,8 +6,12 @@ import '../Skills/Skills.css';
 export const Skills = () => {
   return (
     <section class="skillset">
-        <h1>Skillset</h1>
-        <h3>Technical skills and competences</h3>
+        <h1>Habilidades</h1>
+        <h3>Habilidades técnicas y competencias</h3>
+
+        {/* <h1>Skillset</h1>
+        <h3>Technical skills and competences</h3> */}
+
         <br/>
         <section>
             <div> <LogoHtml/> HTML</div>

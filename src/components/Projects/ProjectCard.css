@@ -134,13 +134,15 @@ button {
 }
 .project-card .project-description h2 {
   font-weight: 400;
+  font-size: 32px;
 }
 .project-card .project-description h2:hover {
   opacity: 0.5;
 }
 .project-card .project-description p {
-  font-size: 14px;
-  opacity: 0.5;
+  font-size: 17px;
+  opacity: 0.6;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 .project-card .project-description .technologies-container {
   height: auto;
