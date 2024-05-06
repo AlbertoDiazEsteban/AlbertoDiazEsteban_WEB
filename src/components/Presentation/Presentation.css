@@ -28,14 +28,10 @@
   font-size: 28px;
   font-weight: 100;
 }
-.presentation button + button {
-  margin-left: 20px;
-}
 .presentation button + button a {
   border: none;
 }
 .presentation button + button:hover {
-  margin-left: 20px;
   color: #78D2F9;
 }
 .presentation button + button:hover a {
@@ -51,7 +47,18 @@
 @media (max-width: 800px) {
   .presentation {
     margin-top: 40px;
+    text-align: center;
     flex-direction: column-reverse;
+  }
+  .presentation h2 {
+    font-size: 45px;
+  }
+  .presentation h3 {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  .presentation p {
+    font-size: 18px;
   }
   .presentation :first-child {
     flex-direction: column;
@@ -59,17 +66,19 @@
   }
   .presentation :first-child button {
     margin: auto;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 10px 20px;
   }
   .presentation .duck-animation {
     display: none;
   }
   .presentation .action-btn, .presentation .normal-btn {
     margin: auto;
-    width: 100%;
+    width: 70%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    scale: 0.8;
   }
 }/*# sourceMappingURL=Presentation.css.map */

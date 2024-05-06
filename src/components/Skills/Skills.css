@@ -44,20 +44,20 @@
   .skillset section div {
     flex-direction: row;
     padding: 5px 10px;
-    font-size: 18px;
+    font-size: 14px;
   }
   .skillset section div svg {
     scale: 1.05;
     margin: auto;
-    height: 30px;
+    height: 20px;
     margin-right: 10px;
   }
   .skillset section div .multiple-logos {
     display: flex;
   }
   .skillset section div .multiple-logos svg {
-    width: 33px;
-    height: 33px;
+    width: 20px;
+    height: 20px;
     margin: 0px 5px 0px 0px;
   }
 }/*# sourceMappingURL=Skills.css.map */

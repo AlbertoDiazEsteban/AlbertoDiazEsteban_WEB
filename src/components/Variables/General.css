@@ -73,4 +73,17 @@ button {
 .presentation, .skillset, .projects {
   max-width: 70%;
   margin: 100px 15% 30px 15%;
+}
+
+@media (max-width: 800px) {
+  .presentation, .skillset, .projects {
+    min-width: 95% !important;
+    max-width: 95% !important;
+    margin: 0px 2.5% 50px 2.5% !important;
+  }
+  .presentation {
+    min-width: 80% !important;
+    max-width: 80% !important;
+    margin: 0px 10% 50px 10% !important;
+  }
 }/*# sourceMappingURL=General.css.map */
