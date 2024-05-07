@@ -7,10 +7,10 @@ export const Skills = () => {
   return (
     <section class="skillset">
         <h1>Habilidades</h1>
-        <h3>Habilidades técnicas y competencias</h3>
+        <h2>Habilidades técnicas y competencias</h2>
 
         {/* <h1>Skillset</h1>
-        <h3>Technical skills and competences</h3> */}
+        <h2>Technical skills and competences</h2> */}
 
         <br/>
         <section>

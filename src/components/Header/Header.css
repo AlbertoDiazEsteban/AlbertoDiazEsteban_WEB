@@ -10,7 +10,7 @@ header {
   position: fixed;
   top: 0;
   margin: auto;
-  z-index: 10;
+  z-index: 100;
   background-color: rgba(54, 54, 54, 0.6352941176);
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
@@ -73,7 +73,7 @@ header .hamburguer-container {
     align-items: center;
     padding: 5%;
     width: 90%;
-    z-index: 5;
+    z-index: 100;
   }
   header .social {
     display: none;
@@ -90,7 +90,7 @@ header .hamburguer-container {
     text-align: center;
     width: 100vw;
     height: 100vh;
-    z-index: 20;
+    z-index: 100;
     background: linear-gradient(90deg, #363636 0%, #363636 2%, #363636 3%);
     transition: 0.5s;
   }
@@ -102,7 +102,7 @@ header .hamburguer-container {
   }
   header .hamburguer-container {
     display: block;
-    z-index: 20;
+    z-index: 100;
   }
   header .hamburguer-container .hamburguer {
     width: 40px;

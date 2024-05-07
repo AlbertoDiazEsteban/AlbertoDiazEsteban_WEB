@@ -1,47 +1,98 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../Variables/General.css';
 import '../Contact/Contact.css';
 import '../Projects/ProjectCard.css';
 
-import { LogoGithub } from '../assets/Logo';
+import { LogoCode, LogoWeb } from '../assets/CardsSvg';
 
-function CardProject(props) {
-    const [currentImgIndex, setCurrentImgIndex] = useState(0);
-    const images = [props.urlImgDemo1, props.urlImgDemo2, props.urlImgDemo3];
-  
+function ProjectCard({
+    mobileDevice: MobileDevice,
+    tabletDevice: TabletDevice,
+    imgProjectPhone,
+    imgProjectTablet,
+    projectLogo: ProjectLogo,
+    urlBackground,
+    urlDemo,
+    title,
+    description,
+    Technologies,
+    urlSite,
+    urlCode
+}) {
+    const phoneRef = useRef(null); 
+    const tabletRef = useRef(null); 
+
+    const applyMouseEffects = (deviceRef) => {
+        if (!deviceRef.current) return;
+
+        const handleMouseMove = (evt) => {
+            const { clientWidth, clientHeight } = deviceRef.current;
+            const { layerX, layerY } = evt;
+            const yRotation = 20 * (layerX - clientWidth / 2) / clientWidth;
+            const xRotation = -20 * (layerY - clientHeight / 2) / clientHeight;
+            const transform = `
+                perspective(500px)
+                scale(1.05)
+                rotateX(${xRotation}deg)
+                rotateY(${yRotation}deg)
+            `;
+            deviceRef.current.style.transform = transform.trim();
+        };
+
+        const handleMouseOut = () => {
+            deviceRef.current.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg)';
+        };
+
+        deviceRef.current.addEventListener('mousemove', handleMouseMove);
+        deviceRef.current.addEventListener('mouseout', handleMouseOut);
+
+        return () => {
+            deviceRef.current.removeEventListener('mousemove', handleMouseMove);
+            deviceRef.current.removeEventListener('mouseout', handleMouseOut);
+        };
+    };
+
     useEffect(() => {
-      const intervalId = setInterval(() => {
-        setCurrentImgIndex((prevIndex) => (prevIndex + 1) % images.length);
-      }, 5000);
-  
-      return () => clearInterval(intervalId);
+        applyMouseEffects(phoneRef);
+        applyMouseEffects(tabletRef);
     }, []);
-          
-    return (
-      <div className="project-card">
-        <div className="project-img">
-            <img className='project-images' src={images[currentImgIndex]} alt="Project Image" />
-        </div>
-      <div className="project-description">
-        <div className="logos">
-          <a href="https://github.com/AlbertoDiazEsteban"><LogoGithub /></a>
-        </div>
-        <div>
-          <h2 onClick={() => window.open(props.urlDemo)}>{props.projectName}</h2>
-          <p>{props.projectDescription}</p>
-          <div className="technologies-container">
-            {props.projectTechnologies.map((technology, index) => (
-                <span key={index} className="technology">{technology}</span>
-            ))}
-          </div>
-          <div className="btn-container">
-            <button><a href={props.urlDemo} target="_blank" rel="noopener noreferrer">Demo</a></button>
-            <button><a href={props.urlRepository} target="_blank" rel="noopener noreferrer">Repositorio</a></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
-export default CardProject;
+    return (
+        <div className="projectCard">
+            <div className="projectImg">
+                <iframe src={urlBackground} frameBorder="0" title='special background animation'></iframe>
+                <div className="device phone" ref={phoneRef} onClick={() => window.open(urlDemo)}>
+                    <MobileDevice imgProject={imgProjectPhone} />
+                </div>
+                <div className="device tablet" ref={tabletRef} onClick={() => window.open(urlDemo)}>
+                    <TabletDevice imgProject={imgProjectTablet}/>
+                </div>
+            </div>
+
+            
+            <div className="projectDescription">
+                <div className='titleProject'>
+                    <h2><a href={urlSite} target='_blank' name={title}>{title}</a></h2>
+                    <a href={urlSite} target='_blank' name={title}><ProjectLogo /></a>
+                </div>
+                <p>{description}</p>
+                <div className="technologies">
+                {Technologies ? (
+                    Technologies.map((technology, index) => (
+                    <p key={technology}>{technology}</p>
+                    ))
+                ) : (
+                    <p>No technologies listed</p>
+                )}
+                </div>
+                <div className="buttons">
+                    <a className="button firstBtn" href={urlSite} target='_blank'name={title}>Open Site <LogoWeb /></a>
+                    <a className="button lastBtn" href={urlCode} target='_blank'name={title}>View Code <LogoCode /></a>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+
+export default ProjectCard;

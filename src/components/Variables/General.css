@@ -39,6 +39,11 @@ h1 {
   color: #78D2F9;
 }
 
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 button {
   font-size: 26px;
   padding: 20px 30px;
@@ -70,13 +75,13 @@ button {
   border: 2px solid #78D2F9;
 }
 
-.presentation, .skillset, .projects {
+.presentation, .skillset {
   max-width: 70%;
   margin: 100px 15% 30px 15%;
 }
 
 @media (max-width: 800px) {
-  .presentation, .skillset, .projects {
+  .presentation, .skillset {
     min-width: 95% !important;
     max-width: 95% !important;
     margin: 0px 2.5% 50px 2.5% !important;

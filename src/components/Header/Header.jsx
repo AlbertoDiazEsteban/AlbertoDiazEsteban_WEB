@@ -24,7 +24,7 @@ export const Header = () => {
   
   return (
     <header>
-      <a href="index.html">
+      <a href="index.html" name="home">
         <LogoClaro className="logo" />
       </a>
       <nav className="dir">
@@ -34,10 +34,10 @@ export const Header = () => {
         {/* <a href="#contact"><p>Contact</p></a> */}
       </nav>
       <nav className="social">
-        <a href="https://www.linkedin.com/in/alberto-diaz-esteban/" target='_blank' id="LinkedIn">
+        <a href="https://www.linkedin.com/in/alberto-diaz-esteban/" target='_blank' id="LinkedIn" name="my linkedin">
           <LogoLinkedin />
         </a>
-        <a href="https://github.com/AlbertoDiazEsteban" target='_blank' id="Github">
+        <a href="https://github.com/AlbertoDiazEsteban" target='_blank' id="Github" name="my github">
           <LogoGithub />
         </a>
         <div className="container">
