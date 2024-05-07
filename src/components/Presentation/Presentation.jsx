@@ -7,7 +7,7 @@ export const Presentation = () => {
     <section className="presentation">
         <div>
             <h2><b>Hola</b>, soy <b>Alberto Díaz!</b> ✌️</h2>
-            <h3><b>De&shy;sa&shy;rro&shy;lla&shy;dor Web</b> y <i>&shy;Di&shy;se&shy;ña&shy;dor Grá&shy;fi&shy;co</i>*</h3>
+            <h3><b>De&shy;sa&shy;rro&shy;lla&shy;dor Web</b> y <i>&shy;Di&shy;se&shy;ña&shy;dor Grá&shy;fi&shy;co</i></h3>
             <p><q>Me en&shy;can&shy;ta a&shy;fron&shy;tar <i>desafíos</i> y
             <br/>en&shy;con&shy;trar <b>So&shy;lu&shy;cio&shy;nes <i>I&shy;nno&shy;va&shy;do&shy;ras</i></b></q>.</p>
 

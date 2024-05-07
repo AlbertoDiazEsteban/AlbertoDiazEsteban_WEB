@@ -61,11 +61,15 @@ function ProjectCard({
         <div className="projectCard">
             <div className="projectImg">
                 <iframe src={urlBackground} frameBorder="0" title='special background animation'></iframe>
-                <div className="device phone" ref={phoneRef} onClick={() => window.open(urlDemo)}>
-                    <MobileDevice imgProject={imgProjectPhone} />
+                <div className="device phone" ref={phoneRef}>
+                    <a href={urlSite} target='_blank' name={title}>
+                        <MobileDevice imgProject={imgProjectPhone} />
+                    </a>
                 </div>
-                <div className="device tablet" ref={tabletRef} onClick={() => window.open(urlDemo)}>
-                    <TabletDevice imgProject={imgProjectTablet}/>
+                <div className="device tablet" ref={tabletRef}>
+                    <a href={urlSite} target='_blank' name={title}>
+                        <TabletDevice imgProject={imgProjectTablet}/>
+                    </a>
                 </div>
             </div>
 
@@ -73,7 +77,9 @@ function ProjectCard({
             <div className="projectDescription">
                 <div className='titleProject'>
                     <h2><a href={urlSite} target='_blank' name={title}>{title}</a></h2>
-                    <a href={urlSite} target='_blank' name={title}><ProjectLogo /></a>
+                    <a href={urlSite} target="_blank" rel="noopener noreferrer" aria-label={title}>
+                      <ProjectLogo alt={title} />
+                    </a>
                 </div>
                 <p>{description}</p>
                 <div className="technologies">

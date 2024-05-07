@@ -92,6 +92,11 @@ button {
     margin: 0px 10% 50px 10% !important;
   }
 }
+.projects {
+  width: 70%;
+  margin: 10px auto;
+}
+
 .projectCard {
   margin: 90px 0px;
   max-height: 425px;
@@ -292,13 +297,15 @@ button {
   body {
     overflow-x: hidden;
   }
+  .projects {
+    width: 98%;
+    margin: 10px auto;
+  }
   .projectCard {
-    width: 93%;
-    margin: 20px auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 10px auto;
     min-height: 600px;
   }
   .projectCard .projectImg {

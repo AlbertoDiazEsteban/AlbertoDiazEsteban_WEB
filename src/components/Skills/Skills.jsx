@@ -5,7 +5,7 @@ import '../Skills/Skills.css';
 
 export const Skills = () => {
   return (
-    <section class="skillset">
+    <section className="skillset">
         <h1>Habilidades</h1>
         <h2>Habilidades técnicas y competencias</h2>
 
@@ -40,8 +40,8 @@ export const Skills = () => {
             <div> <LogoFigma/> Figma</div>
             <div> <LogoVisual/> Visual SC</div>
             <div> <LogoGit/> Git</div>
-            <div class="multiple"> 
-                <section class="multiple-logos">
+            <div className="multiple"> 
+                <section className="multiple-logos">
                     <section>
                         <LogoPhotoshop/>
                         <LogoIllustrator/>

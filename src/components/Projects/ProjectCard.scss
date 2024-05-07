@@ -1,7 +1,10 @@
 @import '../Variables/PaletaColor.scss';
 @import '../Variables/General.scss';
 
-
+.projects {
+    width: 70%;
+    margin: 10px auto;
+}
 .projectCard {
     margin: 90px 0px;
     max-height: 425px;
@@ -210,13 +213,17 @@
     body {
         overflow-x: hidden;
     }
+    .projects {
+        width: 98%;
+        margin: 10px auto;
+    }
     .projectCard {
-        width: 93%;
-        margin: 20px auto;
+        // width: 93%;
+        // margin: 20px auto;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 10px;
+        margin: 10px auto;
         min-height: 600px;
         .projectImg {
             margin-top: 20px;
