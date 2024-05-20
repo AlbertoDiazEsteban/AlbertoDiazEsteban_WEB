@@ -36,13 +36,13 @@ export const Footer = () => {
                 <li><a href="https://color-picker-six-sigma.vercel.app/" target='_blank' name="color-picker" aria-label="Portfolio de Diseño Gráfico" rel="bookmark noopener noreferrer">
                     Portfolio de Diseño Gráfico
                 </a></li>
-                <li><a href="https://rotom-poke-dex.vercel.app/pokedex.html" target='_blank' name="pokedex" aria-label="Curriculum Vitae" rel="bookmark noopener noreferrer">
+                <li><a href="https://drive.google.com/file/d/1R12CouDMhVtPXJe6yzFL87rcDjsArB1M/view?usp=sharing" target='_blank' name="pokedex" aria-label="Curriculum Vitae" rel="bookmark noopener noreferrer">
                     Curriculum Vitae
                 </a></li>            
             </ul>
         </div>
         <div className="footer-column">
-          <a href="#cv" className="btn action-btn" aria-label="Visita mi Curriculum Vitae">Visita mi CV</a>
+          <a href="https://drive.google.com/file/d/1R12CouDMhVtPXJe6yzFL87rcDjsArB1M/view?usp=sharing" className="btn action-btn" aria-label="Visita mi Curriculum Vitae">Visita mi CV</a>
           <a href="mailto:your-email@example.com" className="btn normal-btn" aria-label="Enviar un correo electrónico">Enviar e-mail</a>
         </div>
         {/* <div className="footer-icons">

@@ -24,7 +24,7 @@ export const Presentation = () => {
 
             <div className='btn-container'>
                 <button className="action-btn">
-                    <a href="https://drive.google.com/file/d/1K1zvrCK5X_omjuy1uMzuqpf9qHwLaOkd/view?usp=sharing" target="_blank" rel="noreferrer" className="normal-btn">Visita mi CV</a>
+                    <a href="https://drive.google.com/file/d/1R12CouDMhVtPXJe6yzFL87rcDjsArB1M/view?usp=sharing" target="_blank" rel="noreferrer" className="normal-btn">Visita mi CV</a>
                 </button>
                 <button className="normal-btn">
                     <a href="mailto:albertodiazesteban@gmail.com" className="normal-btn">Enviar e-mail</a>

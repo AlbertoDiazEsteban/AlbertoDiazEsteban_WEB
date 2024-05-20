@@ -15,6 +15,10 @@
   font-family: system-ui;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -28,6 +32,7 @@ body {
   color: #ececec;
   background-color: rgb(0, 0, 0);
   font-family: system-ui;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -92,6 +97,16 @@ button {
     margin: 0px 10% 50px 10% !important;
   }
 }
+#about {
+  scroll-margin-top: 300px;
+}
+
+#projects, #skills {
+  margin-top: -100px;
+  padding-top: 100px;
+  scroll-margin-top: 100px;
+}
+
 .projects {
   width: 70%;
   margin: 20px auto 20px auto;
