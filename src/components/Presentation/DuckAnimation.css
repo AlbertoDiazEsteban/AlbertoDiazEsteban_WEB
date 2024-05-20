@@ -40,8 +40,9 @@
     }
   }
   .duck_head {
+    margin-top: 10px;
     width: 245px;
-    height: 147px;
+    height: 180px;
     border-radius: 100%;
     background-color: #D6B9FF;
     -moz-border-radius: 150px 150px 0px 0px;
@@ -49,8 +50,8 @@
     border-radius: 150px 150px 0px 0px;
   }
   .duck_body {
-    margin-top: -10px;
-    width: 400px;
+    margin-top: -20px;
+    width: 390px;
     height: 200px;
     background-color: #D6B9FF;
     -moz-border-radius: 0px 0px 200px 200px;
@@ -97,21 +98,22 @@
   }
   .dot-top {
     margin-right: 10px;
-    transform: scale(0.9) rotate(20deg);
+    transform: scale(0.7) rotate(25deg);
   }
   .dot-bottom {
     margin-right: -10px;
-    transform: rotate(20deg);
+    transform: rotate(25deg) scale(0.9);
   }
   .eye-shyne {
     position: absolute;
     z-index: 1;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 70px;
     background: #FFFF84;
-    opacity: 0.8;
-    filter: drop-shadow(0 0 5px #FFFF84) saturate(120%);
-    transform: rotate(45deg) skew(15deg, 15deg) scaleY(1.1);
+    opacity: 0.9;
+    background: 
+    radial-gradient(transparent 71%,#FFFF84 72% var(--_b,)) 
+    10000% 10000%/99.5% 99.5%;
   }
   @keyframes blink {
     0%, 4%, 15%, 20%, 30%, 34%, 39%, 43%, 60%, 64%, 100% {
@@ -155,7 +157,7 @@
     margin-right: 68px;
     transform: rotate(25deg);
   }
-  .hair { position: absolute; }
+  .hair { position: absolute; margin-top: 10px; }
   .hair-1 {
     width: 200px;
     height: 80px;

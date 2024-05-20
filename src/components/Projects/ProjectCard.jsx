@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import '../Variables/General.css';
 import '../Contact/Contact.css';
 import '../Projects/ProjectCard.css';
@@ -11,8 +11,7 @@ function ProjectCard({
     imgProjectPhone,
     imgProjectTablet,
     projectLogo: ProjectLogo,
-    urlBackground,
-    urlDemo,
+    rutaImgBackgroundProject,
     title,
     description,
     Technologies,
@@ -38,6 +37,7 @@ function ProjectCard({
             `;
             deviceRef.current.style.transform = transform.trim();
         };
+        
 
         const handleMouseOut = () => {
             deviceRef.current.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg)';
@@ -60,14 +60,18 @@ function ProjectCard({
     return (
         <div className="projectCard">
             <div className="projectImg">
-                <iframe src={urlBackground} frameBorder="0" title='special background animation'></iframe>
+                <div className='backgroundImgProject'>
+                {typeof rutaImgBackgroundProject === 'string' && (
+                    <img src={rutaImgBackgroundProject} alt="Imagen de fondo proyecto" />
+                )}
+                </div>
                 <div className="device phone" ref={phoneRef}>
-                    <a href={urlSite} target='_blank' name={title}>
+                    <a href={urlSite} target='_blank' name={title} rel="noreferrer">
                         <MobileDevice imgProject={imgProjectPhone} />
                     </a>
                 </div>
                 <div className="device tablet" ref={tabletRef}>
-                    <a href={urlSite} target='_blank' name={title}>
+                    <a href={urlSite} target='_blank' name={title} rel="noreferrer">
                         <TabletDevice imgProject={imgProjectTablet}/>
                     </a>
                 </div>
@@ -76,8 +80,8 @@ function ProjectCard({
             
             <div className="projectDescription">
                 <div className='titleProject'>
-                    <h2><a href={urlSite} target='_blank' name={title}>{title}</a></h2>
-                    <a href={urlSite} target="_blank" rel="noopener noreferrer" aria-label={title}>
+                    <h2><a href={urlSite} target='_blank' name={title} rel="noreferrer">{title}</a></h2>
+                    <a href={urlSite} target="_blank" rel="noreferrer" aria-label={`Acceder a la demo de ${title}`}>
                       <ProjectLogo alt={title} />
                     </a>
                 </div>
@@ -92,8 +96,12 @@ function ProjectCard({
                 )}
                 </div>
                 <div className="buttons">
-                    <a className="button firstBtn" href={urlSite} target='_blank'name={title}>Open Site <LogoWeb /></a>
-                    <a className="button lastBtn" href={urlCode} target='_blank'name={title}>View Code <LogoCode /></a>
+                    <a className="button firstBtn" href={urlSite} target='_blank'name={title} rel="noreferrer">
+                        Open Site <LogoWeb />
+                    </a>
+                    <a className="button lastBtn" href={urlCode} target='_blank'name={title} rel="noreferrer">
+                        View Code <LogoCode />
+                    </a>
                 </div>
             </div>
         </div>

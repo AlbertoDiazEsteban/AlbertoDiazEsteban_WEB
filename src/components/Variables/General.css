@@ -15,6 +15,10 @@
   font-family: system-ui;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -26,8 +30,9 @@ body {
   flex-direction: column;
   justify-content: center;
   color: #ececec;
-  background-color: #363636;
+  background-color: rgb(0, 0, 0);
   font-family: system-ui;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -54,18 +59,18 @@ button {
 
 .action-btn {
   background-color: #ececec;
-  color: #363636;
+  color: rgb(0, 0, 0);
   border: 2px solid #ececec;
 }
 
 .action-btn:hover {
   background-color: #78D2F9;
-  color: #363636;
+  color: rgb(0, 0, 0);
   border: 2px solid #78D2F9;
 }
 
 .normal-btn {
-  background-color: #363636;
+  background-color: transparent;
   color: #ececec;
   border: 2px solid #ececec;
 }
@@ -91,4 +96,13 @@ button {
     max-width: 80% !important;
     margin: 0px 10% 50px 10% !important;
   }
+}
+#about {
+  scroll-margin-top: 300px;
+}
+
+#projects, #skills {
+  margin-top: -100px;
+  padding-top: 100px;
+  scroll-margin-top: 100px;
 }/*# sourceMappingURL=General.css.map */

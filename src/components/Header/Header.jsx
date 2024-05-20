@@ -1,58 +1,43 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Variables/General.css';
 import '../Header/Header.css';
 import { LogoClaro, LogoGithub, LogoLinkedin } from '../assets/Logo';
 
-
 export const Header = () => {
-  useEffect(() => {
-    const toggle = document.getElementById('toggle');
-    const dir = document.querySelector('.dir');
+  const [scrollClass, setScrollClass] = useState('');
 
-    const handleChange = () => {
-      if (toggle.checked) {
-        dir.classList.add('active');
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrollClass('scroll-header');
       } else {
-        dir.classList.remove('active');
+        setScrollClass('');
       }
     };
 
-    toggle.addEventListener('change', handleChange);
-
-    
-  }, []);
-  
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); 
   return (
-    <header>
-      <a href="index.html" name="home">
-        <LogoClaro className="logo" />
+
+    <header className={scrollClass}>
+      <a className='logo' href="index.html" name="home" aria-label="Ir a la página de inicio" rel="noreferrer">
+        <LogoClaro />
       </a>
-      <nav className="dir">
-        {/* <a href="index.html" className="home"><p>Home</p></a> */}
-        {/* <a href="#pojects" className="projects"><p>Projects</p></a> */}
-        {/* <a href="#"><p>CSS</p></a> */}
-        {/* <a href="#contact"><p>Contact</p></a> */}
-      </nav>
       <nav className="social">
-        <a href="https://www.linkedin.com/in/alberto-diaz-esteban/" target='_blank' id="LinkedIn" name="my linkedin">
+        <a href="https://www.linkedin.com/in/alberto-diaz-esteban/" target='_blank' id="LinkedIn" name="my linkedin" rel="noreferrer">
           <LogoLinkedin />
         </a>
-        <a href="https://github.com/AlbertoDiazEsteban" target='_blank' id="Github" name="my github">
+        <a href="https://github.com/AlbertoDiazEsteban" target='_blank' id="Github" name="my github" rel="noreferrer">
           <LogoGithub />
         </a>
         <div className="container">
           <div className="toggle"></div>
         </div>
       </nav>
-      <div className="hamburguer-container">
-        <input type="checkbox" id="toggle" />
-        <label htmlFor="toggle" className="hamburguer">
-          <div className="line line0"></div>
-          <div className="line line1"></div>
-          <div className="line line3"></div>
-          <div className="line line4"></div>
-        </label>
-      </div>
     </header>
+
   );
 };

@@ -5,7 +5,7 @@ import '../Skills/Skills.css';
 
 export const Skills = () => {
   return (
-    <section className="skillset">
+    <section className="skillset" id='skills'>
         <h1>Habilidades</h1>
         <h2>Habilidades técnicas y competencias</h2>
 

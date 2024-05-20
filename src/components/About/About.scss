@@ -1,0 +1,59 @@
+@import '../Variables/PaletaColor.scss';
+@import '../Variables/General.css';
+
+.about {
+    background-color: $light;
+    padding: 30px 15%;
+    margin: 10px 0px;
+    h1 {
+        color: $primary;
+        text-shadow: 0px 0px 6px $dark75;
+        z-index: 10;
+    }
+    p {
+        color: $dark;
+    }
+    .circle {
+        margin-top: 30px;
+        border-radius: 100%;
+        background-color: $primary;
+        width: 70vw;
+        height: 80vh;
+        position: absolute;
+        z-index: 0;
+        filter: blur(100px);
+        mix-blend-mode: multiply;
+    }
+
+    .row {
+        z-index: 20;
+        display: flex;
+        margin: 10;
+        img {
+            width: 60%;
+            height: 350px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 10px;
+            z-index: 10;
+        }
+        p {
+            width: 40%;
+            margin-left: 10px;
+            z-index: 10;
+            font-size: 1.4vw;
+        }
+        margin-bottom: 10px;
+    }
+    .row + .row {
+        flex-direction: row-reverse;
+        img {
+            margin-right: 0px;
+            margin-left: 10px;
+        }
+        p {
+            margin-right: 10px;
+            margin-left: 0px;
+        }
+    }
+}

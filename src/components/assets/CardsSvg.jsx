@@ -1,5 +1,15 @@
 import React from 'react'
 
+import seo from '../assets/img/seo.png'
+import seoRspv from '../assets/img/seo-rspv.png'
+import pokedex from '../assets/img/pokedex.png'
+import pokedexRspv from '../assets/img/pokedex-rspv.png'
+import colorpiker from '../assets/img/colorpiker.png'
+import colorpikerRspv from '../assets/img/colorpiker-rspv.png'
+
+
+
+
 
 export const LogoCode = () => {
   return (
@@ -90,8 +100,8 @@ export const PokePhone = ({ imgProjectPhone }) => {
     <g filter="url(#filter0_i_336_67)">
     <path fillRule="evenodd" clipRule="evenodd" d="M185.264 241C197.216 171.055 214.633 86.074 225.853 87.6505C233.439 88.7164 249.153 97.7699 265.851 107.391C288.37 120.365 312.679 134.371 321.26 131.209C329.437 128.195 352.412 90.1039 373.144 55.7329C390.301 27.2894 405.92 1.39365 410.345 0.0333749C420.115 -2.97064 383.907 197.798 372.986 204.807C367.614 208.255 353.48 204.191 339.546 200.185C325.155 196.047 310.979 191.972 306.891 196.296C303.399 199.99 302.907 219.374 303.615 241H440C467.062 241 489 262.938 489 290V1079C489 1106.06 467.062 1128 440 1128H302.59L257.882 1273.46C253.83 1286.64 235.17 1286.64 231.118 1273.46L186.41 1128H49C21.9381 1128 0 1106.06 0 1079V290C0 262.938 21.938 241 49 241H185.264Z" fill="url(#paint0_linear_336_67)"/>
     </g>
-    <image href={imgProjectPhone} x="31" y="270" width="427" height="828" clipPath="url(#screenClip)"/>
-    <rect x="31" y="270" width="427" height="828" rx="33" fill="#373636"/>
+    <image href={pokedexRspv} x="31" y="270" width="427" height="828" rx="33" fill="#373636" style={{ borderRadius: "34px" }}
+/>
     </g>
     <defs>
     <filter id="filter0_i_336_67" x="0" y="0" width="489" height="1285.35" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
@@ -123,7 +133,7 @@ export const PokeTablet = () => {
   <g filter="url(#filter0_i_342_23)">
   <path fillRule="evenodd" clipRule="evenodd" d="M616.264 241C628.216 171.055 645.633 86.0739 656.853 87.6504C664.439 88.7163 680.153 97.7698 696.851 107.39C719.37 120.365 743.679 134.371 752.26 131.209C760.437 128.195 783.412 90.1038 804.144 55.7327C821.301 27.2892 836.92 1.39352 841.345 0.0332528C851.115 -2.97076 814.907 197.798 803.986 204.807C798.614 208.255 784.48 204.191 770.546 200.185C756.155 196.047 741.979 191.971 737.891 196.296C734.399 199.99 733.907 219.374 734.615 241H1299C1326.06 241 1348 262.938 1348 290V984C1348 1011.06 1326.06 1033 1299 1033H734.205L688.882 1180.46C684.83 1193.64 666.17 1193.64 662.118 1180.46L616.795 1033H49C21.938 1033 0 1011.06 0 984V290C0 262.938 21.938 241 49 241H616.264Z" fill="url(#paint0_linear_342_23)"/>
   </g>
-  <image href='https://cdn.glitch.global/2ed6f6ae-b434-4f9e-ab1d-7238902ab310/Captura%20de%20Pantalla%202024-05-04%20a%20las%2016.42%203.png?v=1714856865532' x="33" y="277" width="1281" height="721" rx="33" fill="#373636"/>
+  <image href={pokedex} x="33" y="277" width="1281" height="721" rx="33" fill="#373636"/>
   <defs>
   <filter id="filter0_i_342_23" x="0" y="-0.00012207" width="1348" height="1192.35" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
   <feFlood floodOpacity="0" result="BackgroundImageFix"/>
@@ -148,12 +158,12 @@ export const PokeTablet = () => {
 
 export const AppleTablet = () => {
   return (
-  <svg width="1361" height="1191" viewBox="0 0 1361 1191" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="122" y="226" width="73" height="35" rx="6" fill="#9E9E9E"/>
-  <rect y="349" width="30" height="65" rx="6" fill="#9E9E9E"/>
-  <rect x="207" y="226" width="73" height="35" rx="6" fill="#9E9E9E"/>
-  <rect x="15.1139" y="243.234" width="1343.77" height="786.532" rx="89.0891" fill="#262626" stroke="#C7C6C6" strokeWidth="4.22775" strokeMiterlimit="10"/>
-  <image href="https://cdn.glitch.global/2ed6f6ae-b434-4f9e-ab1d-7238902ab310/image%201.png?v=1714860330956"  x="57.7861" y="283.214" width="1258.43" height="706.573" rx="57.1271" fill="#A4E7E3"/>
+  <svg width="1348" height="1283" viewBox="0 0 1348 1283" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="332" width="25" height="69" rx="12.5" fill="#9E9E9E"/>
+  <rect x="112" y="252" width="82" height="26" rx="13" fill="#9E9E9E"/>
+  <rect x="206" y="252" width="82" height="26" rx="13" fill="#9E9E9E"/>
+  <rect x="21" y="263" width="1315" height="840" rx="71" fill="#262626" stroke="#C7C6C6" strokeWidth="4"/>
+  <image href={seo} x="66" y="310" width="1224" height="746" rx="21" fill="#F9D96D"/>
   </svg>
   );
 };
@@ -161,14 +171,27 @@ export const AppleTablet = () => {
 
 export const ApplePhone = () => {
   return (
-  <svg width="489" height="1283" viewBox="0 0 489 1283" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M23.3948 431.363H15.7063C11.4502 431.363 8 434.814 8 439.07V497.178C8 501.434 11.4502 504.884 15.7063 504.884H23.3948C27.6509 504.884 31.1011 501.434 31.1011 497.178V439.07C31.1011 434.814 27.6509 431.363 23.3948 431.363Z" fill="#9E9E9E"/>
-  <path d="M473.643 479.719H465.954C461.698 479.719 458.248 483.169 458.248 487.425V582.623C458.248 586.879 461.698 590.33 465.954 590.33H473.643C477.899 590.33 481.349 586.879 481.349 582.623V487.425C481.349 483.169 477.899 479.719 473.643 479.719Z" fill="#9E9E9E"/>
-  <path d="M23.3948 368.912H15.7063C11.4502 368.912 8 372.362 8 376.618V402.086C8 406.343 11.4502 409.793 15.7063 409.793H23.3948C27.6509 409.793 31.1011 406.343 31.1011 402.086V376.618C31.1011 372.362 27.6509 368.912 23.3948 368.912Z" fill="#9E9E9E"/>
-  <path d="M23.3948 516.792H15.7063C11.4502 516.792 8 520.242 8 524.498V582.607C8 586.863 11.4502 590.313 15.7063 590.313H23.3948C27.6509 590.313 31.1011 586.863 31.1011 582.607V524.498C31.1011 520.242 27.6509 516.792 23.3948 516.792Z" fill="#9E9E9E"/>
-  <path d="M394.457 210H93.8945C51.6976 210 17.4902 244.207 17.4902 286.404V995.596C17.4902 1037.79 51.6976 1072 93.8945 1072H394.457C436.654 1072 470.862 1037.79 470.862 995.596V286.404C470.862 244.207 436.654 210 394.457 210Z" fill="#262626" stroke="#C7C6C6" strokeWidth="4" strokeMiterlimit="10"/>
-  <path d="M391.147 234.72H97.2052C66.823 234.72 42.1934 259.349 42.1934 289.732V992.267C42.1934 1022.65 66.823 1047.28 97.2052 1047.28H391.147C421.529 1047.28 446.159 1022.65 446.159 992.267V289.732C446.159 259.349 421.529 234.72 391.147 234.72Z" fill="#A4E7E3"/>
-  </svg>
+<svg width="489" height="1283" viewBox="0 0 489 1283" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="10" y="369" width="18" height="41" rx="9" fill="#9E9E9E"/>
+<rect x="10" y="432" width="18" height="72" rx="9" fill="#9E9E9E"/>
+<rect x="10" y="517" width="18" height="73" rx="9" fill="#9E9E9E"/>
+<rect x="462" y="480" width="18" height="110" rx="9" fill="#9E9E9E"/>
+<rect x="19" y="213" width="451" height="857" rx="71" fill="#262626" stroke="#C7C6C6" strokeWidth="4"/>
+<image href={seoRspv} x="43" y="235" width="404" height="813" rx="58" fill="#F9D96D"/>
+</svg>
+  )
+}
+
+export const ApplePhone2 = () => {
+  return (
+<svg width="489" height="1283" viewBox="0 0 489 1283" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="10" y="369" width="18" height="41" rx="9" fill="#9E9E9E"/>
+<rect x="10" y="432" width="18" height="72" rx="9" fill="#9E9E9E"/>
+<rect x="10" y="517" width="18" height="73" rx="9" fill="#9E9E9E"/>
+<rect x="462" y="480" width="18" height="110" rx="9" fill="#9E9E9E"/>
+<rect x="19" y="213" width="451" height="857" rx="71" fill="#262626" stroke="#C7C6C6" strokeWidth="4"/>
+<image href={colorpikerRspv} x="43" y="235" width="404" height="813" rx="58" fill="#F9D96D"/>
+</svg>
   )
 }
 
@@ -247,7 +270,7 @@ export const ApplePc = () => {
     <path d="M1325.65 810.904C1332.71 810.904 1340.06 812.651 1342.04 814.817L1354.31 828.147C1356.29 830.303 1351.96 832.061 1344.64 832.061H1301.42C1294.1 832.061 1286.78 830.303 1285.03 828.147L1274.37 814.817C1272.64 812.651 1276.97 810.904 1284.01 810.904H1325.65Z" fill="#262626"/>
     <path d="M1305.19 787.832C1311.96 787.832 1321.44 792.174 1326.36 797.511L1328 799.3C1332.92 804.636 1331.22 808.978 1324.18 808.978H1195.01C1187.99 808.978 1179.49 804.636 1176.05 799.3L1174.9 797.511C1171.47 792.174 1174.18 787.832 1180.93 787.832H1305.19Z" fill="#262626"/>
     <path d="M1154.85 913.551H465.498C454.072 913.551 448.203 907.618 452.388 900.294L477.154 856.924C481.34 849.6 493.037 843.657 503.312 843.657H1120.13C1130.35 843.657 1141.78 849.6 1145.65 856.924L1168.57 900.294C1172.4 907.618 1166.27 913.551 1154.85 913.551Z" fill="#CDCCCC" stroke="#5A5A59" strokeWidth="2.09264" strokeMiterlimit="10"/>
-    <image href='https://cdn.glitch.global/2ed6f6ae-b434-4f9e-ab1d-7238902ab310/image%202.png?v=1714861374303' x="323" y="42" width="973" height="610" fill="#FF0000"/>
+    <image href={colorpiker} x="323" y="42" width="973" height="610" fill="#FF0000"/>
     </g>
     </svg>
   )

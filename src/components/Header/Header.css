@@ -1,49 +1,27 @@
 @import '../Variables/General.css';
 header {
-  height: 150px;
-  padding: 40px auto;
-  width: 100vw;
-  max-width: 100vw;
+  height: 120px;
+  width: 80vw;
+  max-width: 80vw;
+  padding: 0px 10vw;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0;
   margin: auto;
   z-index: 100;
-  background-color: rgba(54, 54, 54, 0.6352941176);
-  -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
+  background: linear-gradient(to bottom, rgba(236, 236, 236, 0.2431372549), transparent);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  top: -5px;
 }
-header a svg {
-  width: 70px;
+header .logo svg {
+  transition: 0.2s;
   height: 70px;
-  border-radius: 100px;
-  overflow: hidden;
-  transition: transform 0.3s;
-  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.7));
 }
-header .logo:hover {
-  transform: scale(1.1);
-}
-header .dir {
-  display: flex;
-  justify-content: center;
-  -moz-column-gap: 10%;
-       column-gap: 10%;
-  width: 40%;
-}
-header .dir > a {
-  color: #ececec;
-  letter-spacing: 0.5px;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-  font-weight: 600;
-  font-size: 18px;
-  margin: 0px;
-  transition: transform 0.3s;
-}
-header .dir > a p:hover {
-  color: #78D2F9;
+header .logo svg:hover {
+  scale: 1.1;
+  filter: drop-shadow(0 0 10px #000000);
 }
 header .social {
   display: flex;
@@ -51,111 +29,45 @@ header .social {
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
+header .social svg {
+  height: 40px;
+  width: auto;
+}
+header .social svg path {
+  stroke: rgba(236, 236, 236, 0.6705882353);
+  transition: 0.2s;
+}
 header .social a {
-  width: 50px;
-  height: 50px;
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
 }
 header .social a:hover {
-  filter: drop-shadow(0 0 5px #78D2F9) brightness(110%) saturate(105%);
+  filter: drop-shadow(0 0 5px #78D2F9);
 }
-header #toggle {
+header .social a:hover svg path {
+  stroke: #78D2F9;
+}
+header .social #toggle {
   display: none;
 }
-header .hamburguer-container {
+header .social .hamburguer-container {
   display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   header {
     height: 80px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5%;
-    width: 90%;
-    z-index: 100;
+    width: 95vw;
+    max-width: 95vw;
+    padding: 0px 2.5vw;
   }
-  header .social {
-    display: none;
+  header svg {
+    scale: 0.8;
+    margin-left: -10px;
   }
-  header .dir {
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    left: 200vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-    background: linear-gradient(90deg, #363636 0%, #363636 2%, #363636 3%);
-    transition: 0.5s;
+  header .logo {
+    scale: 0.9 !important;
   }
-  header .active {
-    left: 0;
-  }
-  header .dir a {
-    font-size: 2em;
-  }
-  header .hamburguer-container {
-    display: block;
-    z-index: 100;
-  }
-  header .hamburguer-container .hamburguer {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: transform 0.3s ease;
-  }
-  header .hamburguer-container .line {
-    width: 40px;
-    height: 5px;
-    border-radius: 80px;
-    background-color: white;
-    transition: transform 0.2s ease, opacity 0.2s ease, margin 0.2s ease;
-    position: absolute;
-  }
-  header .hamburguer-container .line0 {
-    margin-top: 30px;
-    opacity: 1;
-    transition-delay: 0.1s;
-  }
-  header .hamburguer-container .line4 {
-    margin-bottom: 30px;
-    opacity: 1;
-    transition-delay: 0.1s;
-  }
-  header .hamburguer-container .line1, header .hamburguer-container .line3 {
-    transition-delay: 0.2s;
-  }
-  header .hamburguer-container #toggle:checked + .dir {
-    display: flex;
-  }
-  header .hamburguer-container #toggle:checked + .hamburguer {
-    justify-content: center;
-  }
-  header .hamburguer-container #toggle:checked + .hamburguer .line1 {
-    transform: rotate(45deg) scalex(1.1);
-    position: absolute;
-  }
-  header .hamburguer-container #toggle:checked + .hamburguer .line3 {
-    transform: rotate(-45deg) scalex(1.1);
-    position: absolute;
-  }
-  header .hamburguer-container #toggle:checked + .hamburguer .line0 {
-    margin: 0px;
-    opacity: 0;
-  }
-  header .hamburguer-container #toggle:checked + .hamburguer .line4 {
-    margin: 0px;
-    opacity: 0;
-  }
-  header #toggle:checked + .dir {
-    display: block;
+  header .logo svg:hover {
+    scale: 0.85;
   }
 }/*# sourceMappingURL=Header.css.map */

@@ -34,8 +34,8 @@
   align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
-  border-bottom: 1px solid rgba(54, 54, 54, 0.2392156863);
-  box-shadow: 0 1px 10px rgba(54, 54, 54, 0.2392156863);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
 }
 .contact .contact-chat .header-contact svg {
   width: 60px;
@@ -80,13 +80,13 @@
 .contact .contact-chat form input[type=text], .contact .contact-chat form input[type=email], .contact .contact-chat form textarea {
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid rgba(54, 54, 54, 0.2392156863);
+  border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   box-sizing: border-box;
   background-color: rgba(214, 185, 255, 0.2);
 }
 .contact .contact-chat form hr {
-  background-color: rgba(54, 54, 54, 0.2392156863);
+  background-color: rgba(0, 0, 0, 0.25);
   width: 100%;
   border: none;
   height: 1.2px;
@@ -95,7 +95,7 @@
   height: 100px;
 }
 .contact .contact-chat form label {
-  color: rgba(54, 54, 54, 0.4509803922);
+  color: rgba(0, 0, 0, 0.5);
   font-size: 14px;
 }
 .contact .contact-chat button {

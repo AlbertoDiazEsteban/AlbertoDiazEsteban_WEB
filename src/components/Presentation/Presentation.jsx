@@ -4,10 +4,16 @@ import '../Presentation/Presentation.css';
 
 export const Presentation = () => {
   return (
-    <section className="presentation">
+    <section className="presentation" id='about'>
+        <div className='circle'></div>
         <div>
-            <h2><b>Hola</b>, soy <b>Alberto Díaz!</b> ✌️</h2>
-            <h3><b>De&shy;sa&shy;rro&shy;lla&shy;dor Web</b> y <i>&shy;Di&shy;se&shy;ña&shy;dor Grá&shy;fi&shy;co</i></h3>
+            <h2>
+                <b className='icon-left'>✌️</b>
+                <b>Hola</b>, soy <b>Alberto Díaz!</b>
+                <b className='icon-right'>✌️</b>
+            </h2>   
+            <br />
+            <h3><b>De&shy;sa&shy;rro&shy;lla&shy;dor Web</b> y <br className='salto'/> <i>&shy;Di&shy;se&shy;ña&shy;dor Grá&shy;fi&shy;co</i></h3>
             <p><q>Me en&shy;can&shy;ta a&shy;fron&shy;tar <i>desafíos</i> y
             <br/>en&shy;con&shy;trar <b>So&shy;lu&shy;cio&shy;nes <i>I&shy;nno&shy;va&shy;do&shy;ras</i></b></q>.</p>
 
@@ -16,15 +22,16 @@ export const Presentation = () => {
             <p><q>Pasionate about turning chalenges
             <br/>into <b>Innovate Solutions</b></q>.</p> */}
 
-            <div>
-                <button className="action-btn">Sobre mí</button>
+            <div className='btn-container'>
+                <button className="action-btn">
+                    <a href="https://drive.google.com/file/d/1wN4VYopiMolUfZ-F9_5Xbr3RLDEGaRSb/view?usp=drive_link" target="_blank" rel="noreferrer" className="normal-btn">Visita mi CV</a>
+                </button>
                 <button className="normal-btn">
-                    <a href="https://drive.google.com/file/d/1wN4VYopiMolUfZ-F9_5Xbr3RLDEGaRSb/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="normal-btn">Visita mi CV</a>
+                    <a href="mailto:albertodiazesteban@gmail.com" className="normal-btn">Enviar e-mail</a>
                 </button>
 
                 {/* <button className="action-btn">More About Me</button>
                 <button className="normal-btn">Contact Me</button> */}
-
             </div>
         </div>
 

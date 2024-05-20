@@ -26,7 +26,7 @@ body {
   flex-direction: column;
   justify-content: center;
   color: #ececec;
-  background-color: #363636;
+  background-color: rgb(0, 0, 0);
   font-family: system-ui;
 }
 
@@ -54,18 +54,18 @@ button {
 
 .action-btn {
   background-color: #ececec;
-  color: #363636;
+  color: rgb(0, 0, 0);
   border: 2px solid #ececec;
 }
 
 .action-btn:hover {
   background-color: #78D2F9;
-  color: #363636;
+  color: rgb(0, 0, 0);
   border: 2px solid #78D2F9;
 }
 
 .normal-btn {
-  background-color: #363636;
+  background-color: transparent;
   color: #ececec;
   border: 2px solid #ececec;
 }
@@ -94,14 +94,15 @@ button {
 }
 .projects {
   width: 70%;
-  margin: 10px auto;
+  margin: 20px auto 20px auto;
 }
 
 .projectCard {
-  margin: 90px 0px;
+  margin: 10px auto 40px auto;
   max-height: 425px;
+  max-width: 95%;
   border: 1px solid rgba(236, 236, 236, 0.6705882353);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(236, 236, 236, 0.2431372549), 0 0 10px rgba(236, 236, 236, 0.2431372549);
+  box-shadow: 0 0 30px #000000, inset 0 0 10px rgba(236, 236, 236, 0.2431372549), 0 0 10px rgba(236, 236, 236, 0.2431372549);
   border-radius: 15px;
   overflow: hidden;
   display: flex;
@@ -117,15 +118,23 @@ button {
   justify-content: center;
   align-items: center;
 }
-.projectCard .projectImg iframe {
+.projectCard .projectImg .backgroundImgProject {
   position: relative;
   min-width: 100%;
   min-height: 100%;
   margin: 0;
+  overflow: hidden;
+}
+.projectCard .projectImg .backgroundImgProject img {
   border-radius: 5px 0px 0px 5px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .projectCard .projectImg .device {
   z-index: 10;
+  max-width: 80%;
 }
 .projectCard .projectImg .device svg {
   height: 100%;
@@ -137,14 +146,11 @@ button {
   position: absolute;
   width: 100%;
 }
-.projectCard .projectImg .device:hover > svg {
+.projectCard .projectImg .device svg {
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
+}
+.projectCard .projectImg .device:hover svg {
   filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.9));
-}
-.projectCard .projectImg .device:hover > svg img svg rect {
-  background-color: red;
-}
-.projectCard .projectImg .device:hover > svg img svg rect:hover {
-  background-color: blue;
 }
 .projectCard .projectImg .tablet {
   height: 380px;
@@ -154,6 +160,9 @@ button {
 }
 .projectCard .projectDescription {
   z-index: 50;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 .projectCard .projectDescription .titleProject {
   display: flex;
@@ -186,7 +195,7 @@ button {
 .projectCard .projectDescription p {
   font-size: 17px;
   opacity: 0.6;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 10px #000000;
   font-weight: 300;
   font-size: 14px;
 }
@@ -198,7 +207,7 @@ button {
 }
 .projectCard .projectDescription .technologies p {
   opacity: 1;
-  text-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 0 #000000;
   border: 1px solid rgba(236, 236, 236, 0.4862745098);
   border-radius: 7px;
   font-family: Courier New, Courier, monospace;
@@ -234,7 +243,7 @@ button {
 .projectCard .projectDescription .buttons .firstBtn {
   background-color: #ececec;
   border: 1px solid #ececec;
-  color: #363636;
+  color: rgb(0, 0, 0);
 }
 .projectCard .projectDescription .buttons .firstBtn svg {
   fill: #ececec;
@@ -247,12 +256,12 @@ button {
   fill: #78D2F9;
 }
 .projectCard .projectDescription .buttons .lastBtn {
-  background-color: #363636;
+  background-color: rgb(0, 0, 0);
   border: 1.5px solid #ececec;
   color: #ececec;
 }
 .projectCard .projectDescription .buttons .lastBtn:hover {
-  background-color: #363636;
+  background-color: rgb(0, 0, 0);
   border: 1.5px solid #78D2F9;
   color: #78D2F9;
 }
@@ -262,17 +271,8 @@ button {
 
 @media (max-width: 1200px) {
   .projectCard {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .projectCard .projectImg .device svg {
-    scale: 0.8;
-  }
-}
-@media (max-width: 1100px) {
-  .projectCard {
-    width: 75%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 20px auto;
   }
   .projectCard .projectImg .device svg {
     scale: 0.8;
@@ -280,8 +280,8 @@ button {
 }
 @media (max-width: 1000px) {
   .projectCard {
-    width: 99%;
-    margin: 40px auto;
+    width: 100%;
+    margin: 0px auto 40px auto;
     min-height: 485px;
   }
   .projectCard .projectImg .phone {
@@ -298,7 +298,7 @@ button {
     overflow-x: hidden;
   }
   .projects {
-    width: 98%;
+    width: 95%;
     margin: 10px auto;
   }
   .projectCard {
@@ -314,8 +314,8 @@ button {
     height: 500px;
     margin: 10px;
   }
-  .projectCard .projectImg iframe {
-    border-radius: 8px 8px 0px 0px;
+  .projectCard .projectImg .backgroundImgProject img {
+    border-radius: 8px 8px 0px 0px !important;
   }
   .projectCard .projectImg .device svg {
     scale: 0.8;
@@ -323,7 +323,7 @@ button {
   .projectCard .projectImg .tablet {
     display: inline-block;
     height: 380px;
-    scale: 1;
+    scale: 1.2;
   }
   .projectCard .projectImg .phone {
     display: none;
