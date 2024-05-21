@@ -36,7 +36,7 @@ export const Footer = () => {
                 <li><a href="https://color-picker-six-sigma.vercel.app/" target='_blank' name="color-picker" aria-label="Portfolio de Diseño Gráfico" rel="bookmark noopener noreferrer">
                     Portfolio de Diseño Gráfico
                 </a></li>
-                <li><a href="https://drive.google.com/file/d/1Cs90oNco_FZLG8USOM5Win-rWWXXp6X9/view?usp=sharing" aria-label="Curriculum Vitae" rel="bookmark noopener noreferrer">
+                <li><a href="https://drive.google.com/file/d/1Dvj5NKhs2N3fybtY3I3i6w3Ny4kNJmlo/view?usp=sharing" aria-label="Curriculum Vitae" rel="bookmark noopener noreferrer">
                     Curriculum Vitae
                 </a></li>            
             </ul>
